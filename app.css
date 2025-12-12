@@ -460,6 +460,9 @@ li {
   html{
     font-size: 50%;
   }
+  .hero-sec{
+    height: auto;
+  }
   .fav{
     display: flex;
     flex-direction: column;
@@ -518,12 +521,13 @@ li {
 
   /* Header adjustments */
   .header {
-    min-height: 500px;
+    height: auto;
   }
 
   /* Hero section */
   .hero-sec {
     min-height: 300px;
+    margin-bottom: 30px;
   }
 
   .hero-sec h1 {
