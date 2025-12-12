@@ -82,7 +82,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px;
   height: 100px;
 }
 
@@ -98,26 +98,51 @@ li {
 
 /* -hero-section- */
 .hero-sec {
-  min-height: 500px;
+  position: relative;
+  min-height: 600px;
   background-image: url('./images/pot roast.png');
-  opacity: 0.9;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: left;
+  color: var(--white);
+  /* max-width: 1500px; */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 30px;
+}
+
+.hero-sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.hero-sec h1,
+.hero-sec .hero-btn {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-sec h1 {
   font-size: 48px;
   font-weight: 700;
   color: var(--white);
-  /* text-align: left; */
   padding-top: 200px;
   padding-left: 100px;
   font-family: Marriweather;
-  width: 50%;
+  width: 500px;
 }
+
 
 
 
@@ -125,10 +150,14 @@ li {
 .fav-sec {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-direction: column;
   min-height: 500px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .fav-head {
@@ -143,10 +172,11 @@ li {
 
 .fav-ctn {
   border-radius: 20px;
-  padding: 15px;
+  padding: 25px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   background-color: var(--white);
   transition: 0.5s;
+  margin-bottom: 50px;
 }
 
 .fav-ctn:hover {
@@ -179,7 +209,7 @@ li {
 .split-ctn {
   display: flex;
   min-height: 100vh;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .philo-sec {
@@ -252,8 +282,8 @@ li {
 
 
 .map-ctn {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   background-color: var(--bg-cream);
   border-radius: 8px;
   overflow: hidden;
@@ -265,9 +295,13 @@ li {
   height: 100%;
 }
 
+/* --FOOTER-- */
+
 .footer {
   text-align: center;
   margin-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .footer input {
@@ -279,6 +313,8 @@ li {
   background-color: var(--bg-cream);
   margin-bottom: 30px;
   transition: 0.5s;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer input:hover,
@@ -298,15 +334,21 @@ li {
   margin-bottom: 20px;
 }
 
+.footer h4 {
+  margin-bottom: 10px;
+}
+
 .socials {
   display: flex;
   gap: 10px;
   justify-content: center;
-  border-bottom: 1px solid var(--section-cream);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--primary-tint);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .copy {
+  padding-top: 20px;
   margin-top: 0;
 }
 
@@ -354,3 +396,242 @@ li {
 
 }
 
+
+/* --media queries-- */
+/* --1024px t0 1280px-- */
+@media (max-width: 68rem) {
+  html {
+    font-size: 75%;
+  }
+
+  .fav-sec {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-sec {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-sec h1 {
+    font-size: 40px;
+    text-align: left;
+    width: 400px;
+  }
+
+  .map-ctn {
+    width: 300px;
+    height: 200px;
+  }
+
+  .map-ctn img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* --768px t0 1024px */
+@media (max-width: 60rem) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .split-ctn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .philo-sec {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-info {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* --576px to 768px */
+@media (max-width: 37rem){
+  html{
+    font-size: 50%;
+  }
+  .fav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fav-ctn{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: left;
+  }
+  .fav-ctn img{
+    width: 100%;
+  }
+  .fav-ctn h4 {
+    align-self: flex-start;
+  }
+  .review-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    align-self: flex-start;
+  }
+  .review-container .fa-star,
+  .review-container p {
+    display: inline-block;
+  }
+
+}
+
+/* --<576px */
+@media (max-width: 35.9375rem) {
+  html {
+    font-size: 45%;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .main-logo {
+    width: 200px;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  /* Header adjustments */
+  .header {
+    min-height: 500px;
+  }
+
+  /* Hero section */
+  .hero-sec {
+    min-height: 400px;
+  }
+
+  .hero-sec h1 {
+    font-size: 28px;
+    padding-top: 100px;
+    padding-left: 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .hero-btn {
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Favorites section */
+  .fav-sec {
+    padding: 30px 15px;
+  }
+
+  .fav-ctn {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .fav-ctn img {
+    height: 250px;
+  }
+
+  /* Social review section */
+  .social-rev {
+    padding: 20px 15px;
+  }
+
+  .social-rev img {
+    width: 40px;
+  }
+
+  /* Philosophy section */
+  .philo-sec {
+    padding: 30px 15px;
+  }
+
+  .philo-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .chef-img {
+    width: 150px;
+    height: 180px;
+  }
+
+  .philo-text {
+    width: 100%;
+  }
+
+  /* Info section */
+  .section-info {
+    padding: 30px 15px;
+  }
+
+  .info-grid {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .map-ctn {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+  }
+
+  .map-ctn iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer input {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  .footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .socials {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
