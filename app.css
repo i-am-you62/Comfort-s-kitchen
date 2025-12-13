@@ -401,7 +401,7 @@ li {
 /* --1024px t0 1280px-- */
 @media (max-width: 68rem) {
   html {
-    font-size: 75%;
+    /* font-size: 75%; */
   }
 
   .fav-sec {
@@ -434,7 +434,7 @@ li {
 /* --768px t0 1024px */
 @media (max-width: 60rem) {
   html {
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
   }
 
   .split-ctn {
@@ -458,7 +458,7 @@ li {
 /* --576px to 768px */
 @media (max-width: 37rem) {
   html {
-    font-size: 55%;
+    /* font-size: 55%; */
   }
 
   .hero-sec {
@@ -505,8 +505,8 @@ li {
 /* --<576px */
 @media (max-width: 35.9375rem) {
   html {
-    font-size: 55%;
-  }
+    /* font-size: 55%;
+  } */
 
   /* Navbar adjustments */
   .navbar {
