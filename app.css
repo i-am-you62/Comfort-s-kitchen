@@ -456,38 +456,45 @@ li {
 }
 
 /* --576px to 768px */
-@media (max-width: 37rem){
-  html{
-    font-size: 50%;
+@media (max-width: 37rem) {
+  html {
+    font-size: 55%;
   }
-  .hero-sec{
+
+  .hero-sec {
     height: auto;
   }
-  .fav{
+
+  .fav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .fav-ctn{
+
+  .fav-ctn {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     text-align: left;
   }
-  .fav-ctn img{
+
+  .fav-ctn img {
     width: 100%;
   }
+
   .fav-ctn h4 {
     align-self: flex-start;
   }
+
   .review-container {
     display: flex;
     align-items: center;
     gap: 5px;
     align-self: flex-start;
   }
+
   .review-container .fa-star,
   .review-container p {
     display: inline-block;
@@ -498,15 +505,20 @@ li {
 /* --<576px */
 @media (max-width: 35.9375rem) {
   html {
-    font-size: 45%;
+    font-size: 50%;
   }
 
   /* Navbar adjustments */
   .navbar {
-    flex-direction: column;
-    height: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
     padding: 15px;
     gap: 15px;
+  }
+
+  .menu-items {
+    display: none;
   }
 
   .main-logo {
@@ -514,20 +526,19 @@ li {
   }
 
   .navbar-menu {
-    flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
   }
 
   /* Header adjustments */
   .header {
-    height: auto;
+    height: 60vh;
+    min-height: 350px;
   }
 
   /* Hero section */
   .hero-sec {
     min-height: 300px;
-    margin-bottom: 30px;
   }
 
   .hero-sec h1 {
@@ -553,12 +564,13 @@ li {
 
   /* Favorites section */
   .fav-sec {
-    padding: 30px 15px;
+    padding: 20px 10px;
   }
 
   .fav-ctn {
     padding: 15px;
     margin-bottom: 30px;
+    width: 340px;
   }
 
   .fav-ctn img {
@@ -593,6 +605,9 @@ li {
   .philo-text {
     width: 100%;
   }
+  .philo-head{
+    text-align: center;
+  }
 
   /* Info section */
   .section-info {
@@ -603,6 +618,12 @@ li {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+  }
+
+  .info-text {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 
   .map-ctn {
@@ -619,6 +640,7 @@ li {
   /* Footer */
   .footer {
     padding: 30px 15px;
+    margin-bottom: 10px;
   }
 
   .footer input {
@@ -637,5 +659,6 @@ li {
   .socials {
     flex-wrap: wrap;
     gap: 15px;
+    padding-top: 30px;
   }
 }
