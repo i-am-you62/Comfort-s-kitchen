@@ -505,7 +505,7 @@ li {
 /* --<576px */
 @media (max-width: 35.9375rem) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 
   /* Navbar adjustments */
