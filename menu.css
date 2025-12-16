@@ -23,12 +23,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* background-color: var(--bg-cream); */
+}
+
+html {
+  background-color: var(--bg-cream);
 }
 
 body {
   background-color: var(--bg-cream);
   line-height: 1.6;
   margin: 0 auto;
+}
+
+.container {
+  background-color: var(--bg-cream);
+  min-height: 100vh;
 }
 
 h1,
@@ -71,8 +81,8 @@ li {
   list-style: none;
 }
 
-/* ---SECTIONS--- */
-
+/* ---*SECTIONS*--- */
+/* --NAVBAR-- */
 /* -navbar- */
 .navbar {
   display: flex;
@@ -92,24 +102,19 @@ li {
   gap: 30px;
 }
 
-/* -hero-section- */
+/* ---HEADER-- */
+/* --hero section-- */
 .hero-sec {
-  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  width: 100%;
   background-image: url('./images/pot roast.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: left;
-  color: var(--white);
-  width: 100%;
-  height: 100vh;
-  min-height: 700px;
   margin: 0 auto;
-}
-
-.hero-btn {
-  display: flex;
-  gap: 30px;
+  position: relative;
 }
 
 .hero-sec::before {
@@ -124,63 +129,140 @@ li {
 }
 
 .hero-sec h1,
+.hero-sec p,
 .hero-sec .hero-btn {
   position: relative;
   z-index: 1;
 }
 
 .hero-sec h1 {
-  font-size: 48px;
+  font-size: var(--text-h1);
   font-weight: 700;
   color: var(--white);
   padding-top: 200px;
-  padding-left: 100px;
+  padding-left: 200px;
   font-family: Marriweather;
-  width: 500px;
+
 }
 
+.hero-sec p {
+  padding-left: 200px;
+  color: var(--white);
+  font-size: var(--text-para);
+}
 
+/* ---MAIN--- */
+main {
+  background-color: var(--bg-cream);
+}
 
-
-/* -fav-grid- */
-.fav-sec {
+/* -menu link- */
+.menu-link {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-direction: column;
-  min-height: 500px;
-  margin-bottom: 50px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.fav-head {
+  align-items: center;
   text-align: center;
 }
 
-.fav {
+.menu-link li {
+  display: inline-block;
+  text-align: center;
+  /* gap: 30px; */
+  padding: 50px 10px;
+}
+
+/* --starter-- */
+#starter {
+  background-color: var(--bg-cream);
+}
+
+.starter-content {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  align-items: start;
+  padding: 30px;
+  gap: 15px;
+  margin: 0 auto;
 }
 
-.fav-ctn {
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+#starter h3 {
+  text-align: center;
+}
+
+.starter-card {
+  padding-bottom: 20px;
   background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 550px;
   transition: 0.5s;
-  margin-bottom: 50px;
 }
 
-.fav-ctn:hover {
+.starter-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 30px 60px rgba(29, 53, 87, 0.18);
 }
 
-.fav-ctn img {
+.starter-card h4 {
+  padding-left: 10px;
+}
+
+
+#starter img {
+  max-width: 550px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 20px;
+}
+
+.starter-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.food-ctn {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 30px;
+}
+
+/* --main-- */
+#main {
+  background-color: var(--primary-shade);
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 30px;
+}
+
+#main h3 {
+  color: var(--white);
+  padding-bottom: 10px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-ctn {
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.main-ctn:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 6px rgba(29, 53, 87, 0.18);
+}
+
+.main-ctn img {
   max-width: 350px;
   width: 100%;
   height: 300px;
@@ -188,107 +270,97 @@ li {
   object-position: center;
 }
 
-.fav-ctn p {
+.main-ctn p {
   display: inline-block;
 }
 
+main.main-ctn {
+  background-color: var(--bg-cream);
+}
 
-.social-rev {
+.checked {
+  color: #ffd700;
+}
+
+/* --dessert-- */
+#dessert {
+  background-color: var(--bg-cream);
+  /* text-align: center; */
+}
+
+#dessert h3 {
+  padding-bottom: 20px;
   text-align: center;
-  margin-bottom: 30px;
-  background-color: var(--accent-sage);
-  color: var(--white);
-  padding: 30px;
-  margin-bottom: 30px;
 }
 
-.split-ctn {
-  display: flex;
-  min-height: 100vh;
-  margin-bottom: 50px;
-}
-
-.philo-sec {
-  padding: 60px;
+.dessert-content {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 50%;
+  align-items: start;
+  gap: 15px;
+  padding: 30px;
+  margin: 0 auto;
 }
 
-.philo-content {
-  display: flex;
-  gap: 30px;
-  max-width: 800px;
-  align-items: flex-start;
-}
-
-.chef-img {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
+.dessert-card {
+  padding-bottom: 20px;
+  background-color: var(--white);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 550px;
+  transition: 0.5s;
 }
 
-.philo-text {
-  width: 50%;
-
+.dessert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(29, 53, 87, 0.18);
 }
 
-.philosophy-text p {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
+.dessert-card h4 {
+  padding-left: 10px;
 }
 
-.section-info {
-  background-color: var(--section-cream);
+#dessert img {
+  max-width: 550px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 20px;
+}
+
+.dessert-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px;
-  width: 50%;
-}
-
-.section-info h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-.info-grid {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.info-text {
-  min-width: 200px;
-}
-
-.hours-list {
-  list-style: none;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
-
-.hours-list li {
-  margin-bottom: 5px;
-}
-
-
-.map-ctn {
-  width: 400px;
-  height: 300px;
-  background-color: var(--bg-cream);
-  border-radius: 8px;
-  overflow: hidden;
-  border: 2px solid var(--white);
-}
-
-.map-ctn img {
   width: 100%;
-  height: 100%;
+}
+
+.dessert-ctn {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 30px;
+}
+
+/* --drinks-- */
+#drinks {
+  background-color: var(--section-cream);
+  text-align: center;
+  padding: 100px;
+}
+
+.drink-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: left;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.drink-ctn {
+  max-width: 350px;
 }
 
 /* --FOOTER-- */
@@ -373,35 +445,17 @@ li {
   color: var(--text-charcoal);
 }
 
-.hero-btn {
-  padding-left: 100px;
-}
-
-.menu-btn:link,
-.menu-btn:visited {
+.menu-btn:hover,
+.menu-btn:active {
+  background-color: var(--primary-shade);
+  border: 1px solid var(--primary-shade);
   color: var(--white);
-  border: 1px solid var(--white);
   transition: 0.5s;
 }
 
-.menu-btn:hover,
-.menu-btn:active {
-  background-color: var(--secondary-tint);
-  border: 1px solid var(--secondary-tint);
-  color: var(--text-charcoal);
-
-}
-
-
-/* --media queries-- */
+/* --MEDIA QUERIES-- */
 /* --1024px t0 1280px-- */
 @media (max-width: 68rem) {
-
-
-  .fav-sec {
-    max-width: 800px;
-    margin: 0 auto;
-  }
 
   .hero-sec {
     width: 100%;
@@ -414,87 +468,123 @@ li {
     width: 400px;
   }
 
-  .map-ctn {
-    width: 300px;
-    height: 200px;
+  .starter-card {
+    width: 450px;
   }
 
-  .map-ctn img {
-    width: 100%;
-    height: 100%;
+  #starter img {
+    max-width: 450px;
+  }
+
+  .dessert-card {
+    width: 450px;
+  }
+
+  #dessert img {
+    max-width: 450px;
+  }
+
+  .main-ctn img {
+    max-width: 300px;
   }
 }
 
 /* --768px t0 1024px */
 @media (max-width: 60rem) {
 
-
-  .split-ctn {
-    display: flex;
+  .starter-content {
     flex-direction: column;
+    align-items: center;
   }
 
-  .philo-sec {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+  .food-ctn {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .section-info {
+  .starter-card {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 550px;
+  }
+
+  #starter img {
+    max-width: 100%;
+  }
+
+  .main-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dessert-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dessert-ctn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dessert-card {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  #dessert img {
+    max-width: 100%;
+  }
+
+  .drink-content {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 /* --576px to 768px */
 @media (max-width: 37rem) {
 
-
   .hero-sec {
     height: auto;
   }
 
-  .fav {
-    display: flex;
+  .menu-link li {
+    padding: 30px 15px;
+  }
+
+  .starter-content {
+    padding: 20px;
+  }
+
+  .main-content {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
-  .fav-ctn {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    text-align: left;
-  }
-
-  .fav-ctn img {
+  .main-ctn {
+    max-width: 100%;
     width: 100%;
   }
 
-  .fav-ctn h4 {
-    align-self: flex-start;
+  .main-ctn img {
+    max-width: 100%;
   }
 
-  .review-container {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    align-self: flex-start;
+  .dessert-content {
+    padding: 20px;
   }
 
-  .review-container .fa-star,
-  .review-container p {
-    display: inline-block;
+  #drinks {
+    padding: 50px 30px;
   }
 
+  .drink-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 /* --<576px */
 @media (max-width: 35.9375rem) {
-
 
   /* Navbar adjustments */
   .navbar {
@@ -537,94 +627,106 @@ li {
     max-width: 300px;
   }
 
-  .hero-btn {
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 20px;
-    gap: 15px;
+  .hero-sec p {
     padding-left: 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Menu links */
+  .menu-link li {
+    padding: 20px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Starter section */
+  .starter-content {
+    padding: 15px;
+  }
+
+  .food-ctn {
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .starter-card {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  #starter img {
+    height: 250px;
+  }
+
+  .starter-text {
+    padding: 10px;
+  }
+
+  /* Main section */
+  #main {
+    padding: 30px 15px;
+  }
+
+  .main-content {
+    gap: 20px;
+  }
+
+  .main-ctn {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .main-ctn img {
+    height: 250px;
+  }
+
+  .review-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .review-container .fa-star,
+  .review-container p {
+    display: inline-block;
+    font-size: 0.85rem;
+  }
+
+  /* Dessert section */
+  .dessert-content {
+    padding: 15px;
+  }
+
+  .dessert-ctn {
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .dessert-card {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  #dessert img {
+    height: 250px;
+  }
+
+  .dessert-text {
+    padding: 10px;
+  }
+
+  /* Drinks section */
+  #drinks {
+    padding: 30px 15px;
+  }
+
+  .drink-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
     padding-top: 20px;
   }
 
-  .btn {
-    padding: 10px;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-
-  /* Favorites section */
-  .fav-sec {
-    padding: 20px 10px;
-  }
-
-  .fav-ctn {
-    padding: 15px;
-    margin-bottom: 30px;
-    width: 340px;
-  }
-
-  .fav-ctn img {
-    height: 250px;
-  }
-
-  /* Social review section */
-  .social-rev {
-    padding: 20px 15px;
-  }
-
-  .social-rev img {
-    width: 40px;
-  }
-
-  /* Philosophy section */
-  .philo-sec {
-    padding: 30px 15px;
-  }
-
-  .philo-content {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .chef-img {
-    width: 150px;
-    height: 180px;
-  }
-
-  .philo-text {
-    width: 100%;
-  }
-  .philo-head{
-    text-align: center;
-  }
-
-  /* Info section */
-  .section-info {
-    padding: 30px 15px;
-  }
-
-  .info-grid {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .info-text {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .map-ctn {
-    width: 100%;
+  .drink-ctn {
     max-width: 100%;
-    height: 250px;
-  }
-
-  .map-ctn iframe {
-    width: 100%;
-    height: 100%;
   }
 
   /* Footer */
